@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nueva Mascota - API REST Cliente</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], 
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .radio-group label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .links {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crear Nueva Mascota</h1>
+    
+    <form method="POST" action="crearmascota.php">
+        <div class="form-group">
+            <label for="nombre">Nombre (max. 50 caracteres):</label>
+            <input type="text" id="nombre" name="nombre" maxlength="50" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="descripcion">Descripción (max. 250 caracteres):</label>
+            <textarea id="descripcion" name="descripcion" maxlength="250" rows="4" required></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>Tipo:</label>
+            <select name="tipo" required>
+                <option value="">Seleccione un tipo</option>
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Pájaro">Pájaro</option>
+                <option value="Dragón">Dragón</option>
+                <option value="Conejo">Conejo</option>
+                <option value="Hamster">Hamster</option>
+                <option value="Tortuga">Tortuga</option>
+                <option value="Pez">Pez</option>
+                <option value="Serpiente">Serpiente</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label>Pública:</label>
+            <div class="radio-group">
+                <input type="radio" id="publica-si" name="publica" value="Si" required>
+                <label for="publica-si">Sí</label>
+                
+                <input type="radio" id="publica-no" name="publica" value="No">
+                <label for="publica-no">No</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" value="Crear Mascota">
+        </div>
+    </form>
+    
+    <div class="links">
+        <a href="mascotas.php">Volver a la lista de mascotas</a>
+    </div>
+
+    <!-- TODO TEST CREAR MASCOTA -->
+</body>
+</html>

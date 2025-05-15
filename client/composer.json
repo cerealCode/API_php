@@ -1,0 +1,21 @@
+{
+    "name": "cerealcode/client",
+    "description": "API REST en Laravel",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Cerealcode\\Client\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "cerealCode",
+            "email": "fernandezvidalluis@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "8.0.x-dev"
+    }
+}
